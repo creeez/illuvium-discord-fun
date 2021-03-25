@@ -27,21 +27,17 @@ const Filters = ({ setFilters }) => {
     setIsOpen(true);
   };
 
-  const handleOnChange = (_, { name, option }) => {
-    if (!option) {
-      setFilters((prev) => {
-        return {
-          ...prev,
-          [name]: [],
-        };
-      });
+  const handleOnChange = (_, { name, option, removedValue }) => {
+    if (!option && removedValue) {
+      setFilters((prev) => ({
+        ...prev,
+        [name]: prev[name].filter((filter) => filter !== removedValue.value),
+      }));
     } else {
-      setFilters((prev) => {
-        return {
-          ...prev,
-          [name]: prev[name] ? [...prev[name], option.value] : [option.value],
-        };
-      });
+      setFilters((prev) => ({
+        ...prev,
+        [name]: prev[name] ? [...prev[name], option.value] : [option.value],
+      }));
     }
   };
 

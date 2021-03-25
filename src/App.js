@@ -17,8 +17,8 @@ function App() {
 
     const filterIlluvials = (illuvials, filters) => {
       const filterKeys = Object.keys(filters);
-      return illuvials.filter((illuvial) => {
-        return filterKeys.every((key) => {
+      return illuvials.filter((illuvial) =>
+        filterKeys.every((key) => {
           if (!filters[key].length) return true;
           if (Array.isArray(illuvial[key])) {
             return illuvial[key].some((keyEle) =>
@@ -26,8 +26,8 @@ function App() {
             );
           }
           return filters[key].includes(illuvial[key]);
-        });
-      });
+        })
+      );
     };
 
     const sortIlluvials = (a, b) => {
