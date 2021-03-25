@@ -4,7 +4,7 @@
   min-width: auto;
   display: block;
   margin: 2em 0 0;
-  @include respond-to("desktop") {
+  @include respond-to("tablet") {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,7 +17,7 @@
   border-radius: 0.3em;
   box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
   border: solid 1px #ccc;
-  @include respond-to("desktop") {
+  @include respond-to("tablet") {
     margin-right: 20px;
     width: 326px;
   }
@@ -29,7 +29,7 @@
   border-radius: 0.3em;
   margin: 0.3em;
   border: solid 1px #ccc;
-  background: #000;
+  background: #fff;
   text-align: center;
 }
 

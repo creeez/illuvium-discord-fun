@@ -112,17 +112,17 @@ body {
   -webkit-text-size-adjust: 100%;
   padding: 1em 0.5em;
   position: relative;
-
-  @include respond-to("desktop") {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .container-full-width {
   width: 100%;
-  max-width: 1216px;
   margin: 0 auto;
+  @include respond-to("tablet") {
+    max-width: 700px;
+  }
+  @include respond-to("desktop") {
+    max-width: 1216px;
+  }
 }
 
 .logo {
@@ -151,6 +151,7 @@ body {
   display: table;
 }
 
+@import "modal.scss";
 @import "filters.scss";
 @import "illuvialForm.scss";
 @import "illuvialList.scss";

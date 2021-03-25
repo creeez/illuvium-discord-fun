@@ -87,7 +87,12 @@ input {
 .modal-form__footer {
   margin-top: 20px;
   .btn--update {
-    width: 65%;
+    @include respond-to("tablet") {
+      width: 65%;
+    }
+    @include respond-to("tablet") {
+      width: 60%;
+    }
   }
   .btn--delete {
     float: right;

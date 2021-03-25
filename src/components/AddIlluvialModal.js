@@ -14,16 +14,6 @@ import {
 import { ADD_ILLUVIAL, GET_ILLUVIALS } from "../graphql/queries";
 
 Modal.setAppElement("body");
-const customStyles = {
-  content: {
-    top: "10%",
-    background: "#190c29",
-    maxWidth: "50%",
-    margin: "0 auto",
-    maxHeight: "600px",
-    padding: "40px",
-  },
-};
 
 const customStylesSelect = {
   option: (provided) => ({
@@ -68,9 +58,9 @@ const AddIlluvialForm = ({ modalIsOpen, setIsOpen }) => {
 
   return (
     <Modal
+      className="app-modal"
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      style={customStyles}
       contentLabel="Edit Illuvial"
     >
       <button className="close-modal" onClick={closeModal}>

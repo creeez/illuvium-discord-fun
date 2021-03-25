@@ -18,16 +18,6 @@ import {
 } from "../utils/formOptions";
 
 Modal.setAppElement("body");
-const customStyles = {
-  content: {
-    background: "#190c29",
-    maxWidth: "50%",
-    margin: "0 auto",
-    padding: "40px",
-    top: "10%",
-    maxHeight: "600px",
-  },
-};
 
 const customStylesSelect = {
   option: (provided) => ({
@@ -103,7 +93,7 @@ const EditIlluvialModal = ({ config, modalIsOpen, setIsOpen }) => {
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      style={customStyles}
+      className="app-modal"
       contentLabel="Edit Illuvial"
     >
       <button className="close-modal" onClick={closeModal}>

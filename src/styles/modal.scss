@@ -1,0 +1,16 @@
+.app-modal {
+  margin-top: 3em;
+  padding: 2em;
+  background: #190c29;
+  @include respond-to("tablet") {
+    position: relative;
+    top: 10%;
+    max-width: 80%;
+    margin: 0 auto;
+    max-height: 600px;
+    padding: 3em;
+  }
+  @include respond-to("desktop") {
+    max-width: 40%;
+  }
+}
