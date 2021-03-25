@@ -17,8 +17,6 @@ import {
   tiers,
 } from "../utils/formOptions";
 
-import "../styles/illuvialForm.scss";
-
 Modal.setAppElement("body");
 const customStyles = {
   content: {

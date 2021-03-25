@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import EditIlluvialModal from "./EditIlluvialModal";
 
-import "../styles/illuvialList.scss";
-
 const Illuvial = ({ config }) => {
   const {
     name,

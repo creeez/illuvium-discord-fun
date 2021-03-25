@@ -1,16 +1,36 @@
 /* filters */
 
 .filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 85%;
-  margin: 0 auto;
+  @include respond-to("desktop") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.filters__btn-group {
+  margin: 2em 0 0;
+  button:first-of-type {
+    float: left;
+  }
+  button:last-of-type {
+    float: right;
+  }
+  @include respond-to("tablet") {
+    button {
+      width: 40%;
+    }
+  }
 }
 
 .filters > section {
-  flex: 1 0 33%;
-  padding: 1em 1em 0 0;
+  padding: 1em 0 0;
+  @include respond-to("desktop") {
+    flex: 1 0 33%;
+    padding: 1em 1em 0 0;
+  }
 }
 
 .label,

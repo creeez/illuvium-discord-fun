@@ -1,0 +1,30 @@
+$breakpoints: (
+  "tablet": 768px,
+  "desktop": 1025px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin skin($color) {
+  border: 3px solid darken($color, 0%);
+  color: darken($color, 0%);
+  background-color: darken($color, 40%);
+  &:hover {
+    border-color: lighten($color, 10%);
+    color: lighten($color, 10%);
+    background-color: darken($color, 30%);
+  }
+  &:focus {
+    border-color: lighten($color, 10%);
+    color: lighten($color, 10%);
+    background-color: darken($color, 30%);
+    outline: 0;
+    border-radius: 12px;
+  }
+}

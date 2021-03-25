@@ -4,6 +4,11 @@ $t1-color: #00d4ff;
 $t2-color: #72ff00;
 $t3-color: #fe53bb;
 
+$mobile-bp: 1024px;
+
+@import "mixins.scss";
+@import "buttons.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -105,9 +110,13 @@ html {
 html,
 body {
   -webkit-text-size-adjust: 100%;
-  margin: 0;
-  padding: 0;
+  padding: 1em 0.5em;
   position: relative;
+
+  @include respond-to("desktop") {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .container-full-width {
@@ -120,9 +129,14 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  max-width: 20%;
+  max-width: 60%;
   margin: 1em auto 0;
+  @include respond-to("tablet") {
+    max-width: 30%;
+  }
+  @include respond-to("desktop") {
+    max-width: 40%;
+  }
 }
 
 .logo__discord,
@@ -131,4 +145,12 @@ body {
   width: 50%;
 }
 
-@import "buttons.scss";
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@import "filters.scss";
+@import "illuvialForm.scss";
+@import "illuvialList.scss";

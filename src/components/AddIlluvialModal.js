@@ -13,8 +13,6 @@ import {
 } from "../utils/formOptions";
 import { ADD_ILLUVIAL, GET_ILLUVIALS } from "../graphql/queries";
 
-import "../styles/illuvialForm.scss";
-
 Modal.setAppElement("body");
 const customStyles = {
   content: {
