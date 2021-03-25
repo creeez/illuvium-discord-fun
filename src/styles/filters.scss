@@ -1,0 +1,30 @@
+/* filters */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.filters > section {
+  flex: 1 0 33%;
+  padding: 1em 1em 0 0;
+}
+
+.label,
+section > label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.add-illuvial-btn {
+  width: 85%;
+  margin: 0 auto;
+  padding: 2em 0;
+}

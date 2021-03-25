@@ -1,0 +1,47 @@
+@mixin skin($color) {
+  border: 3px solid darken($color, 0%);
+  color: darken($color, 0%);
+  background-color: darken($color, 40%);
+  &:hover {
+    border-color: lighten($color, 10%);
+    color: lighten($color, 10%);
+    background-color: darken($color, 30%);
+  }
+  &:focus {
+    border-color: lighten($color, 10%);
+    color: lighten($color, 10%);
+    background-color: darken($color, 30%);
+    outline: 0;
+    border-radius: 12px;
+  }
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+button {
+  outline: 0;
+}
+
+button {
+  font-weight: 800;
+  background: transparent;
+  min-width: 100px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 15px;
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 0 3px 0 0;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  @include skin($t1-color);
+}
+
+.btn-success {
+  @include skin($t2-color);
+}
+.btn-caution {
+  @include skin($t3-color);
+}

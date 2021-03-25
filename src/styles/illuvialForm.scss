@@ -1,0 +1,95 @@
+.close-modal {
+  float: right;
+  padding: 2px;
+  min-width: 40px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-wrapper input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 363px;
+  height: 48px;
+  padding-left: 16px;
+  border: 0;
+  background: rgba(76, 232, 190, 0.15);
+  border-radius: 0;
+  color: #ffffff;
+  z-index: 11;
+}
+
+.h1 {
+  margin-top: 80px;
+  color: white;
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
+}
+
+.illuvial-form {
+  margin: 0 auto;
+}
+
+.p {
+  color: #bf1650;
+  text-align: center;
+}
+
+input {
+  border: 1px solid #ccc;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.label,
+.illuvial-form section > label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.submit {
+  margin-top: 20px;
+}
+
+.modal-header {
+  font-size: 1.6em;
+}
+
+.modal-form__content-group {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  > section {
+    width: 50%;
+    min-height: 62px;
+    padding-right: 12px;
+  }
+  > section:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.modal-form__footer {
+  margin-top: 20px;
+  .btn--update {
+    width: 65%;
+  }
+  .btn--delete {
+    float: right;
+  }
+}
