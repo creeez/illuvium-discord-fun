@@ -27,11 +27,16 @@ const Filters = ({ setFilters }) => {
     setIsOpen(true);
   };
 
-  const handleOnChange = (_, { name, option, removedValue }) => {
-    if (!option && removedValue) {
+  const handleOnChange = (_, { name, option, removedValue, removedValues }) => {
+    if (removedValue) {
       setFilters((prev) => ({
         ...prev,
         [name]: prev[name].filter((filter) => filter !== removedValue.value),
+      }));
+    } else if (removedValues) {
+      setFilters((prev) => ({
+        ...prev,
+        [name]: [],
       }));
     } else {
       setFilters((prev) => ({
@@ -113,6 +118,7 @@ const Filters = ({ setFilters }) => {
       <div className="add-illuvial-btn">
         <button onClick={openModal}>Add Illuvial</button>
       </div>
+      {/* <div className="card stats-card"></div> */}
       <AddIlluvialModal setIsOpen={setIsOpen} modalIsOpen={modalIsOpen} />
     </>
   );
