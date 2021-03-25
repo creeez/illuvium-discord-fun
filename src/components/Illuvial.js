@@ -2,6 +2,18 @@ import { useState } from "react";
 
 import EditIlluvialModal from "./EditIlluvialModal";
 
+const customStyle = () => {
+  return {
+    background: `linear-gradient(
+    ${Math.floor(Math.random() * Math.floor(300))}deg,
+    rgba(0, 0, 0, 0) -33.8%,
+    #603074 23.54%,
+    rgba(0, 0, 0, 0) 132.9%
+  ),
+  #000000`,
+  };
+};
+
 const Illuvial = ({ config }) => {
   const {
     name,
@@ -27,7 +39,7 @@ const Illuvial = ({ config }) => {
           <img alt="illuvial" src={pic} />
         </div>
         <div className="content">
-          <h3>{name}</h3>
+          <h3 style={customStyle()}>{name}</h3>
           <div className="illuvial-card__content-group">
             <div>
               <label>Tier:</label>
